@@ -11,10 +11,10 @@ import net.minecraft.block.BlockState;
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 
 @DiamantinocraftModElements.ModElement.Tag
-public class VoidDragonFireballItem extends DiamantinocraftModElements.ModElement {
-	@ObjectHolder("diamantinocraft:void_dragon_fireball")
+public class VoidFireballItem extends DiamantinocraftModElements.ModElement {
+	@ObjectHolder("diamantinocraft:void_fireball")
 	public static final Item block = null;
-	public VoidDragonFireballItem(DiamantinocraftModElements instance) {
+	public VoidFireballItem(DiamantinocraftModElements instance) {
 		super(instance, 39);
 	}
 
@@ -24,8 +24,8 @@ public class VoidDragonFireballItem extends DiamantinocraftModElements.ModElemen
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(null).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("void_dragon_fireball");
+			super(new Item.Properties().group(null).maxStackSize(64).rarity(Rarity.EPIC));
+			setRegistryName("void_fireball");
 		}
 
 		@Override

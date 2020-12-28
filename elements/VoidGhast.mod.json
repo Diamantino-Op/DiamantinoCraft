@@ -2,29 +2,29 @@
   "_fv": 15,
   "_type": "mob",
   "definition": {
-    "mobName": "Void Dragon",
-    "mobLabel": "Void Dragon",
-    "mobModelName": "ModelEnderDragonModel",
-    "mobModelTexture": "void_dragon.png",
+    "mobName": "Void Ghast",
+    "mobLabel": "",
+    "mobModelName": "Ghast",
+    "mobModelTexture": "void_ghast.png",
     "mobModelGlowTexture": "",
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelWidth": 1.0,
+    "modelHeight": 1.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -13421773,
+      "value": -10066330,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16764007,
+      "value": -13421773,
       "falpha": 0.0
     },
     "creativeTab": {
       "value": "MISC"
     },
-    "isBoss": true,
-    "bossBarColor": "BLUE",
+    "isBoss": false,
+    "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
       "value": ""
@@ -46,14 +46,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
-    "attackKnockback": 10.0,
-    "knockbackResistance": 0.0,
-    "movementSpeed": 0.3,
-    "armorBaseValue": 0.0,
-    "trackingRange": 64,
+    "attackStrength": 10,
+    "attackKnockback": 100.0,
+    "knockbackResistance": 1000.0,
+    "movementSpeed": 2.0,
+    "armorBaseValue": 20.0,
+    "trackingRange": 128,
     "health": 600,
-    "xpAmount": 50,
+    "xpAmount": 100,
     "waterMob": false,
     "flyingMob": true,
     "guiBoundTo": "<NONE>",
@@ -75,13 +75,13 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "entity.ghast.ambient"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "entity.ghast.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "entity.ghast.death"
     },
     "stepSound": {
       "value": ""
@@ -95,21 +95,21 @@
     "particleAmount": 4,
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_fly\"><field name=\"radius\">16</field><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_fly\"><field name=\"radius\">32</field><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
     "ranged": true,
     "rangedAttackItem": {
-      "value": "CUSTOM:VoidDragonFireball"
+      "value": "CUSTOM:VoidFireball"
     },
     "rangedItemType": "Default item",
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
-    "spawningProbability": 50,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 5,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 2,
-    "maxNumberOfMobsPerGroup": 2,
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:VoidBiome"

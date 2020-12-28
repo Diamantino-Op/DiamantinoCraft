@@ -83,11 +83,11 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "CUSTOM:VoidDragon"
+          "value": "CUSTOM:VoidGhast"
         },
-        "minGroup": 2,
-        "maxGroup": 2,
-        "weight": 50,
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 5,
         "spawnType": "monster"
       }
     ]

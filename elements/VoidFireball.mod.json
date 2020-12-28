@@ -3,10 +3,10 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "void_dragon_fireball",
+    "texture": "void_fireball",
     "customModelName": "Normal",
-    "name": "Void Dragon Fireball",
-    "rarity": "COMMON",
+    "name": "Void Fireball",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "No creative tab entry"
     },
