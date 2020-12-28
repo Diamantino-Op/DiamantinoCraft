@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "solar_structure": "solar_structure",
+        "solar_base": "solar_base",
+        "solar_center": "solar_center",
+        "solar_top": "solar_top"
+      },
+      "name": "default"
+    }
+  }
+}

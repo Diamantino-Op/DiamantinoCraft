@@ -1,0 +1,11 @@
+{
+  "parent": "diamantinocraft:custom/solar_panel",
+  "textures": {
+    "all": "diamantinocraft:blocks/solar_top",
+    "particle": "diamantinocraft:blocks/solar_top",
+    "solar_structure": "diamantinocraft:blocks/solar_structure",
+    "solar_base": "diamantinocraft:blocks/solar_base",
+    "solar_center": "diamantinocraft:blocks/solar_center",
+    "solar_top": "diamantinocraft:blocks/solar_top"
+  }
+}
