@@ -1,5 +1,6 @@
 package com.diamantino.diamantinocraft.procedures;
 
+import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.world.server.ServerWorld;
@@ -13,6 +14,7 @@ import net.minecraft.network.play.server.SPlayerAbilitiesPacket;
 import net.minecraft.network.play.server.SPlaySoundEventPacket;
 import net.minecraft.network.play.server.SPlayEntityEffectPacket;
 import net.minecraft.network.play.server.SChangeGameStatePacket;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
 
@@ -71,6 +73,20 @@ public class TeleporterEndProcedure extends DiamantinocraftModElements.ModElemen
 				return _retval.get();
 			}
 		}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) > 0)) {
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				if (_ent != null) {
+					final int _sltid = (int) (2);
+					final int _amount = (int) 1;
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable) {
+							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							_stk.shrink(_amount);
+							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+						}
+					});
+				}
+			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
