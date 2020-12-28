@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "diamantinocraft:blocks/void_grass_bottom",
+    "up": "diamantinocraft:blocks/void_grass_top",
+    "north": "diamantinocraft:blocks/void_grass_side",
+    "east": "diamantinocraft:blocks/void_grass_side",
+    "south": "diamantinocraft:blocks/void_grass_side",
+    "west": "diamantinocraft:blocks/void_grass_side",
+    "particle": "diamantinocraft:blocks/void_grass_bottom"
+  }
+}

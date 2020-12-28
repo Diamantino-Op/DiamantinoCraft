@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "diamantinocraft:blocks/void__stone",
+    "up": "diamantinocraft:blocks/void__stone",
+    "north": "diamantinocraft:blocks/void__stone",
+    "east": "diamantinocraft:blocks/void__stone",
+    "south": "diamantinocraft:blocks/void__stone",
+    "west": "diamantinocraft:blocks/void__stone",
+    "particle": "diamantinocraft:blocks/void__stone"
+  }
+}

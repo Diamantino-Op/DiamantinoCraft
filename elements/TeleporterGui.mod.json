@@ -1,0 +1,140 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 204,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Teleporter",
+          "color": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "name": "Teleporter",
+          "x": 123,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Overworld",
+          "onClick": {
+            "name": "TeleporterOverworld"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "Overworld",
+          "x": 231,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Nether",
+          "onClick": {
+            "name": "TeleporterNether"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Nether",
+          "x": 240,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Void",
+          "onClick": {
+            "name": "TeleporterVoid"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Void",
+          "x": 123,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "End",
+          "onClick": {
+            "name": "TeleporterEnd"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "End",
+          "x": 123,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:OverworldToken"
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #0",
+          "x": 204,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:NetherToken"
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #1",
+          "x": 213,
+          "y": 89
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:EndToken"
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #2",
+          "x": 168,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:VoidToken"
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #3",
+          "x": 177,
+          "y": 89
+        }
+      }
+    ]
+  }
+}

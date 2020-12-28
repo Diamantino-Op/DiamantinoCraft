@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "diamantinocraft:blocks/void_cobblestone",
+    "up": "diamantinocraft:blocks/void_cobblestone",
+    "north": "diamantinocraft:blocks/void_cobblestone",
+    "east": "diamantinocraft:blocks/void_cobblestone",
+    "south": "diamantinocraft:blocks/void_cobblestone",
+    "west": "diamantinocraft:blocks/void_cobblestone",
+    "particle": "diamantinocraft:blocks/void_cobblestone"
+  }
+}

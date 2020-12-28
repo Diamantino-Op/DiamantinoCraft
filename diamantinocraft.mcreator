@@ -484,19 +484,205 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "void_pack_stick_recipe"
+    },
+    {
+      "name": "VoidCobblestone",
+      "type": "block",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_cobblestone"
+    },
+    {
+      "name": "VoidStone",
+      "type": "block",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_stone"
+    },
+    {
+      "name": "VoidDirt",
+      "type": "block",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_dirt"
+    },
+    {
+      "name": "VoidGrass",
+      "type": "block",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_grass"
+    },
+    {
+      "name": "VoidBiome",
+      "type": "biome",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_biome"
+    },
+    {
+      "name": "VoidDimension",
+      "type": "dimension",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_dimension",
+      "metadata": {
+        "ep": false
+      }
+    },
+    {
+      "name": "TeleporterOverworld",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleporter_overworld",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeleporterNether",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleporter_nether",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeleporterVoid",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleporter_void",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeleporterEnd",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleporter_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Teleporter",
+      "type": "block",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleporter"
+    },
+    {
+      "name": "OverworldToken",
+      "type": "item",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_token"
+    },
+    {
+      "name": "NetherToken",
+      "type": "item",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_token"
+    },
+    {
+      "name": "EndToken",
+      "type": "item",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_token"
+    },
+    {
+      "name": "VoidToken",
+      "type": "item",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_token"
+    },
+    {
+      "name": "TeleporterGui",
+      "type": "gui",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleporter_gui"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.diamantinocraft.teleporter": "Teleporter",
       "block.diamantinocraft.base_wire_con_4_up": "Base Wire Con 4 Up",
       "block.diamantinocraft.base_wire_con_2_angle_down": "Base Wire Con 2 Angle Down",
-      "block.diamantinocraft.base_wire_con_3_down_and_up": "Base Wire Con 3 Down And Up",
       "block.diamantinocraft.base_wire_con_5_down": "Base Wire Con 5 Down",
+      "block.diamantinocraft.base_wire_con_3_down_and_up": "Base Wire Con 3 Down And Up",
+      "item.diamantinocraft.void_dimension": "Void Dimension Portal Igniter",
+      "item.diamantinocraft.void_token": "Void Token",
+      "item.diamantinocraft.end_token": "End Token",
       "block.diamantinocraft.base_wire_con_6": "Base Wire Con 6",
       "block.diamantinocraft.base_wire_con_3_up_angle": "Base Wire Con 3 Up Angle",
       "block.diamantinocraft.base_wire_con_4": "Base Wire Con 4",
+      "block.diamantinocraft.void_grass": "Void Grass",
+      "item.diamantinocraft.overworld_token": "Overworld Token",
+      "biome.diamantinocraft.void_biome": "Void Biome",
       "block.diamantinocraft.void_pack_log": "Void Log",
       "block.diamantinocraft.base_wire_con_3_down_angle": "Base Wire Con 3 Down Angle",
       "block.diamantinocraft.void_pack_planks": "Void Planks",
@@ -506,11 +692,14 @@
       "block.diamantinocraft.base_wire_con_3": "Base Wire Con 3",
       "block.diamantinocraft.base_wire_con_0": "Wire",
       "block.diamantinocraft.base_wire_con_1": "Base Wire Con 1",
+      "block.diamantinocraft.void_cobblestone": "Void Cobblestone",
       "block.diamantinocraft.base_wire_con_3_up": "Base Wire Con 3 Up",
       "block.diamantinocraft.base_wire_con_4_down": "Base Wire Con 4 Down",
       "block.diamantinocraft.base_wire_con_5_up": "Base Wire Con 5 Up",
+      "block.diamantinocraft.void_dirt": "Void Dirt",
       "block.diamantinocraft.base_wire_con_2_angle_up": "Base Wire Con 2 Angle Up",
       "block.diamantinocraft.base_wire_con_4_up_and_down_straight": "Base Wire Con 4 Up And Down Straight",
+      "item.diamantinocraft.nether_token": "Nether Token",
       "block.diamantinocraft.void_pack_slab": "Void Slab",
       "block.diamantinocraft.void_pack_stairs": "Void Stairs",
       "block.diamantinocraft.void_pack_fence": "Void Fence",
@@ -519,6 +708,7 @@
       "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
       "block.diamantinocraft.base_wire_con_2_angle": "Base Wire Con 2 Angle",
       "block.diamantinocraft.void_pack_leaves": "Void Leaves",
+      "block.diamantinocraft.void_stone": "Void Stone",
       "block.diamantinocraft.base_wire_con_5_main": "Base Wire Con 5 Main",
       "block.diamantinocraft.base_wire_con_3_down": "Base Wire Con 3 Down",
       "block.diamantinocraft.void_pack_fence_gate": "Void Fence Gate"

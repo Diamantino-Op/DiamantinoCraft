@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "diamantinocraft:blocks/solar_structure",
+    "up": "diamantinocraft:blocks/teleporter_top",
+    "north": "diamantinocraft:blocks/teleporter_side",
+    "east": "diamantinocraft:blocks/teleporter_side",
+    "south": "diamantinocraft:blocks/teleporter_side",
+    "west": "diamantinocraft:blocks/teleporter_side",
+    "particle": "diamantinocraft:blocks/solar_structure"
+  }
+}
