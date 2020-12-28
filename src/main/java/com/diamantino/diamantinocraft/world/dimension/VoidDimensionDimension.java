@@ -36,7 +36,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 @DiamantinocraftModElements.ModElement.Tag
 public class VoidDimensionDimension extends DiamantinocraftModElements.ModElement {
 	public VoidDimensionDimension(DiamantinocraftModElements instance) {
-		super(instance, 31);
+		super(instance, 22);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

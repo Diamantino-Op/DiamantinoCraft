@@ -13,7 +13,7 @@
     {
       "name": "SolarPanelT1GenerateEnergy",
       "type": "procedure",
-      "sortid": 2,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -42,7 +42,7 @@
     {
       "name": "MultimeterShowEnergy",
       "type": "procedure",
-      "sortid": 3,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -79,7 +79,7 @@
     {
       "name": "Multimeter",
       "type": "item",
-      "sortid": 3,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -88,7 +88,7 @@
     {
       "name": "EnergyCellT1",
       "type": "block",
-      "sortid": 4,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -97,7 +97,7 @@
     {
       "name": "EnergyCellT1EnergyManagement",
       "type": "procedure",
-      "sortid": 5,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -126,7 +126,7 @@
     {
       "name": "BaseWireCon0",
       "type": "block",
-      "sortid": 6,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -135,7 +135,7 @@
     {
       "name": "BaseWireCon2AngleDown",
       "type": "block",
-      "sortid": 6,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -144,7 +144,7 @@
     {
       "name": "BaseWireCon2AngleUp",
       "type": "block",
-      "sortid": 6,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -153,7 +153,7 @@
     {
       "name": "BaseWireCon1",
       "type": "block",
-      "sortid": 6,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -162,7 +162,7 @@
     {
       "name": "BaseWireCon2",
       "type": "block",
-      "sortid": 6,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -171,7 +171,7 @@
     {
       "name": "BaseWireCon2Angle",
       "type": "block",
-      "sortid": 6,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -180,7 +180,7 @@
     {
       "name": "BaseWireCon3UpAngle",
       "type": "block",
-      "sortid": 7,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -189,7 +189,7 @@
     {
       "name": "BaseWireCon3Up",
       "type": "block",
-      "sortid": 7,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -198,7 +198,7 @@
     {
       "name": "BaseWireCon3",
       "type": "block",
-      "sortid": 7,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -207,7 +207,7 @@
     {
       "name": "BaseWireCon3Down",
       "type": "block",
-      "sortid": 7,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -216,7 +216,7 @@
     {
       "name": "BaseWireCon3DownAndUp",
       "type": "block",
-      "sortid": 7,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -225,7 +225,7 @@
     {
       "name": "BaseWireCon3DownAngle",
       "type": "block",
-      "sortid": 7,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -234,7 +234,7 @@
     {
       "name": "BaseWireCon4UpAndDownStraight",
       "type": "block",
-      "sortid": 8,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -243,7 +243,7 @@
     {
       "name": "BaseWireCon4UpAndDown",
       "type": "block",
-      "sortid": 8,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -252,7 +252,7 @@
     {
       "name": "BaseWireCon4Up",
       "type": "block",
-      "sortid": 8,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -261,7 +261,7 @@
     {
       "name": "BaseWireCon4Down",
       "type": "block",
-      "sortid": 8,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -270,7 +270,7 @@
     {
       "name": "BaseWireCon4",
       "type": "block",
-      "sortid": 8,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -279,7 +279,7 @@
     {
       "name": "BaseWireCon6",
       "type": "block",
-      "sortid": 9,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -288,7 +288,7 @@
     {
       "name": "BaseWireCon5Up",
       "type": "block",
-      "sortid": 9,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -297,7 +297,7 @@
     {
       "name": "BaseWireCon5Main",
       "type": "block",
-      "sortid": 9,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -306,7 +306,7 @@
     {
       "name": "BaseWireCon5Down",
       "type": "block",
-      "sortid": 9,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -315,7 +315,7 @@
     {
       "name": "WireConnector",
       "type": "procedure",
-      "sortid": 10,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -344,7 +344,7 @@
     {
       "name": "VoidPackWood",
       "type": "block",
-      "sortid": 11,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -353,7 +353,7 @@
     {
       "name": "VoidPackLog",
       "type": "block",
-      "sortid": 12,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -362,7 +362,7 @@
     {
       "name": "VoidPackPlanks",
       "type": "block",
-      "sortid": 13,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -371,7 +371,7 @@
     {
       "name": "VoidPackLeaves",
       "type": "block",
-      "sortid": 14,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -380,7 +380,7 @@
     {
       "name": "VoidPackStairs",
       "type": "block",
-      "sortid": 15,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -389,7 +389,7 @@
     {
       "name": "VoidPackSlab",
       "type": "block",
-      "sortid": 16,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -398,7 +398,7 @@
     {
       "name": "VoidPackFence",
       "type": "block",
-      "sortid": 17,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -407,7 +407,7 @@
     {
       "name": "VoidPackFenceGate",
       "type": "block",
-      "sortid": 18,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -416,7 +416,7 @@
     {
       "name": "VoidPackItemsTag",
       "type": "tag",
-      "sortid": 19,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -425,7 +425,7 @@
     {
       "name": "VoidPackWoodRecipe",
       "type": "recipe",
-      "sortid": 20,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -434,7 +434,7 @@
     {
       "name": "VoidPackPlanksRecipe",
       "type": "recipe",
-      "sortid": 21,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -443,7 +443,7 @@
     {
       "name": "VoidPackStairsRecipe",
       "type": "recipe",
-      "sortid": 22,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -452,7 +452,7 @@
     {
       "name": "VoidPackSlabRecipe",
       "type": "recipe",
-      "sortid": 23,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -461,7 +461,7 @@
     {
       "name": "VoidPackFenceRecipe",
       "type": "recipe",
-      "sortid": 24,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -470,7 +470,7 @@
     {
       "name": "VoidPackFenceGateRecipe",
       "type": "recipe",
-      "sortid": 25,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -479,7 +479,7 @@
     {
       "name": "VoidPackStickRecipe",
       "type": "recipe",
-      "sortid": 26,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -488,7 +488,7 @@
     {
       "name": "VoidCobblestone",
       "type": "block",
-      "sortid": 27,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -497,7 +497,7 @@
     {
       "name": "VoidStone",
       "type": "block",
-      "sortid": 27,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -506,7 +506,7 @@
     {
       "name": "VoidDirt",
       "type": "block",
-      "sortid": 28,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -515,7 +515,7 @@
     {
       "name": "VoidGrass",
       "type": "block",
-      "sortid": 29,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -524,7 +524,7 @@
     {
       "name": "VoidBiome",
       "type": "biome",
-      "sortid": 30,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -533,7 +533,7 @@
     {
       "name": "VoidDimension",
       "type": "dimension",
-      "sortid": 31,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -545,7 +545,7 @@
     {
       "name": "TeleporterOverworld",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -578,7 +578,7 @@
     {
       "name": "TeleporterNether",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -611,7 +611,7 @@
     {
       "name": "TeleporterVoid",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -644,7 +644,7 @@
     {
       "name": "TeleporterEnd",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -677,7 +677,7 @@
     {
       "name": "Teleporter",
       "type": "block",
-      "sortid": 33,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -686,7 +686,7 @@
     {
       "name": "OverworldToken",
       "type": "item",
-      "sortid": 34,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -695,7 +695,7 @@
     {
       "name": "NetherToken",
       "type": "item",
-      "sortid": 35,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -704,7 +704,7 @@
     {
       "name": "EndToken",
       "type": "item",
-      "sortid": 36,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -713,7 +713,7 @@
     {
       "name": "VoidToken",
       "type": "item",
-      "sortid": 37,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -722,7 +722,7 @@
     {
       "name": "TeleporterGui",
       "type": "gui",
-      "sortid": 34,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -731,7 +731,7 @@
     {
       "name": "VoidDimensionTeleportToZeroZeroZero",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -748,7 +748,7 @@
     {
       "name": "VoidFireball",
       "type": "item",
-      "sortid": 39,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -757,61 +757,81 @@
     {
       "name": "VoidGhast",
       "type": "mob",
-      "sortid": 39,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "void_ghast"
+    },
+    {
+      "name": "VoidTab",
+      "type": "tab",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_tab"
+    },
+    {
+      "name": "VoidTabB",
+      "type": "tab",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_tab_b"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.diamantinocraft.teleporter": "Teleporter",
       "block.diamantinocraft.base_wire_con_4_up": "Base Wire Con 4 Up",
       "block.diamantinocraft.base_wire_con_2_angle_down": "Base Wire Con 2 Angle Down",
+      "item.diamantinocraft.void_token": "Void Token",
+      "item.diamantinocraft.end_token": "End Token",
+      "item.diamantinocraft.overworld_token": "Overworld Token",
+      "biome.diamantinocraft.void_biome": "Void Biome",
+      "block.diamantinocraft.void_pack_planks": "Void Planks",
+      "block.diamantinocraft.void_cobblestone": "Void Cobblestone",
+      "block.diamantinocraft.base_wire_con_3_up": "Base Wire Con 3 Up",
+      "block.diamantinocraft.base_wire_con_4_down": "Base Wire Con 4 Down",
+      "block.diamantinocraft.base_wire_con_2_angle_up": "Base Wire Con 2 Angle Up",
+      "block.diamantinocraft.base_wire_con_4_up_and_down_straight": "Base Wire Con 4 Up And Down Straight",
+      "item.diamantinocraft.nether_token": "Nether Token",
+      "entity.diamantinocraft.void_ghast": "Void Ghast",
+      "itemGroup.tabvoid_tab_b": "Voidcraft Blocks",
+      "block.diamantinocraft.void_pack_fence": "Void Fence",
+      "item.diamantinocraft.void_ghast_spawn_egg": "Void Ghast Spawn Egg",
+      "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
+      "block.diamantinocraft.base_wire_con_5_main": "Base Wire Con 5 Main",
+      "block.diamantinocraft.teleporter": "Teleporter",
       "block.diamantinocraft.base_wire_con_5_down": "Base Wire Con 5 Down",
       "block.diamantinocraft.base_wire_con_3_down_and_up": "Base Wire Con 3 Down And Up",
       "item.diamantinocraft.void_dimension": "Void Dimension Portal Igniter",
-      "item.diamantinocraft.void_token": "Void Token",
-      "item.diamantinocraft.end_token": "End Token",
       "block.diamantinocraft.base_wire_con_6": "Base Wire Con 6",
       "block.diamantinocraft.base_wire_con_3_up_angle": "Base Wire Con 3 Up Angle",
       "block.diamantinocraft.base_wire_con_4": "Base Wire Con 4",
       "block.diamantinocraft.void_grass": "Void Grass",
-      "item.diamantinocraft.overworld_token": "Overworld Token",
-      "biome.diamantinocraft.void_biome": "Void Biome",
       "block.diamantinocraft.void_pack_log": "Void Log",
       "block.diamantinocraft.base_wire_con_3_down_angle": "Base Wire Con 3 Down Angle",
-      "block.diamantinocraft.void_pack_planks": "Void Planks",
       "item.diamantinocraft.multimeter": "Multimeter",
       "block.diamantinocraft.base_wire_con_4_up_and_down": "Base Wire Con 4 Up And Down",
       "block.diamantinocraft.base_wire_con_2": "Base Wire Con 2",
       "block.diamantinocraft.base_wire_con_3": "Base Wire Con 3",
       "block.diamantinocraft.base_wire_con_0": "Wire",
       "block.diamantinocraft.base_wire_con_1": "Base Wire Con 1",
-      "block.diamantinocraft.void_cobblestone": "Void Cobblestone",
-      "block.diamantinocraft.base_wire_con_3_up": "Base Wire Con 3 Up",
-      "block.diamantinocraft.base_wire_con_4_down": "Base Wire Con 4 Down",
       "block.diamantinocraft.base_wire_con_5_up": "Base Wire Con 5 Up",
+      "itemGroup.tabvoid_tab": "Voidcraft Items",
       "block.diamantinocraft.void_dirt": "Void Dirt",
-      "block.diamantinocraft.base_wire_con_2_angle_up": "Base Wire Con 2 Angle Up",
-      "block.diamantinocraft.base_wire_con_4_up_and_down_straight": "Base Wire Con 4 Up And Down Straight",
-      "item.diamantinocraft.nether_token": "Nether Token",
-      "entity.diamantinocraft.void_ghast": "Void Ghast",
       "item.diamantinocraft.void_fireball": "Void Fireball",
       "block.diamantinocraft.void_pack_slab": "Void Slab",
       "block.diamantinocraft.void_pack_stairs": "Void Stairs",
-      "block.diamantinocraft.void_pack_fence": "Void Fence",
-      "item.diamantinocraft.void_ghast_spawn_egg": "Void Ghast Spawn Egg",
       "block.diamantinocraft.void_pack_wood": "Void Wood",
       "block.diamantinocraft.solar_panel_t_1": "Solar Panel Tier 1",
-      "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
       "block.diamantinocraft.base_wire_con_2_angle": "Base Wire Con 2 Angle",
       "block.diamantinocraft.void_pack_leaves": "Void Leaves",
       "block.diamantinocraft.void_stone": "Void Stone",
-      "block.diamantinocraft.base_wire_con_5_main": "Base Wire Con 5 Main",
       "block.diamantinocraft.base_wire_con_3_down": "Base Wire Con 3 Down",
       "block.diamantinocraft.void_pack_fence_gate": "Void Fence Gate"
     }

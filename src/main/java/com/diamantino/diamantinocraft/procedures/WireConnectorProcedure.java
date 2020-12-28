@@ -42,7 +42,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftMod;
 @DiamantinocraftModElements.ModElement.Tag
 public class WireConnectorProcedure extends DiamantinocraftModElements.ModElement {
 	public WireConnectorProcedure(DiamantinocraftModElements instance) {
-		super(instance, 10);
+		super(instance, 47);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -84,7 +84,7 @@ public class BaseWireCon3Block extends DiamantinocraftModElements.ModElement {
 	@ObjectHolder("diamantinocraft:base_wire_con_3")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BaseWireCon3Block(DiamantinocraftModElements instance) {
-		super(instance, 7);
+		super(instance, 34);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

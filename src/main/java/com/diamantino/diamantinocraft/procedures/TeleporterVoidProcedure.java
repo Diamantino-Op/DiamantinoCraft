@@ -29,7 +29,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftMod;
 @DiamantinocraftModElements.ModElement.Tag
 public class TeleporterVoidProcedure extends DiamantinocraftModElements.ModElement {
 	public TeleporterVoidProcedure(DiamantinocraftModElements instance) {
-		super(instance, 32);
+		super(instance, 59);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

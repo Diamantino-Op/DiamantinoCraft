@@ -28,7 +28,6 @@ import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.PotionEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
@@ -62,6 +61,7 @@ import net.minecraft.block.BlockState;
 import java.util.Random;
 import java.util.EnumSet;
 
+import com.diamantino.diamantinocraft.itemgroup.VoidTabItemGroup;
 import com.diamantino.diamantinocraft.item.VoidFireballItem;
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 
@@ -71,7 +71,7 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 	@ObjectHolder("diamantinocraft:entitybulletvoid_ghast")
 	public static final EntityType arrow = null;
 	public VoidGhastEntity(DiamantinocraftModElements instance) {
-		super(instance, 39);
+		super(instance, 23);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -82,7 +82,7 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 				.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(1f, 1f)).build("void_ghast")
 						.setRegistryName("void_ghast");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -10066330, -13421773, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -10066330, -13421773, new Item.Properties().group(VoidTabItemGroup.tab))
 				.setRegistryName("void_ghast_spawn_egg"));
 		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
@@ -91,11 +91,6 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		boolean biomeCriteria = false;
-		if (new ResourceLocation("diamantinocraft:void_biome").equals(event.getName()))
-			biomeCriteria = true;
-		if (!biomeCriteria)
-			return;
 		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 5, 1, 1));
 	}
 
@@ -152,7 +147,9 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new Goal() {
+			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(3, new Goal() {
 				{
 					this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
 				}
@@ -191,7 +188,7 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 					}
 				}
 			});
-			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1, 20) {
+			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 1, 20) {
 				@Override
 				protected Vector3d getPosition() {
 					Random random = CustomEntity.this.getRNG();
@@ -201,9 +198,7 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 					return new Vector3d(dir_x, dir_y, dir_z);
 				}
 			});
-			this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, false));
-			this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 			this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
 				@Override
 				public boolean shouldContinueExecuting() {

@@ -1,0 +1,11 @@
+{
+  "_fv": 15,
+  "_type": "tab",
+  "definition": {
+    "name": "Voidcraft Blocks",
+    "icon": {
+      "value": "CUSTOM:Teleporter"
+    },
+    "showSearch": true
+  }
+}

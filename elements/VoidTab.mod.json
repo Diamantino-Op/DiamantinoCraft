@@ -1,0 +1,11 @@
+{
+  "_fv": 15,
+  "_type": "tab",
+  "definition": {
+    "name": "Voidcraft Items",
+    "icon": {
+      "value": "CUSTOM:Multimeter"
+    },
+    "showSearch": true
+  }
+}

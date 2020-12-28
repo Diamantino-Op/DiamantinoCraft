@@ -17,7 +17,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftMod;
 @DiamantinocraftModElements.ModElement.Tag
 public class EnergyCellT1EnergyManagementProcedure extends DiamantinocraftModElements.ModElement {
 	public EnergyCellT1EnergyManagementProcedure(DiamantinocraftModElements instance) {
-		super(instance, 5);
+		super(instance, 26);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

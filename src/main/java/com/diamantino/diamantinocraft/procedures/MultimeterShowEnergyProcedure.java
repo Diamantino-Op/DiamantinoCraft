@@ -19,7 +19,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftMod;
 @DiamantinocraftModElements.ModElement.Tag
 public class MultimeterShowEnergyProcedure extends DiamantinocraftModElements.ModElement {
 	public MultimeterShowEnergyProcedure(DiamantinocraftModElements instance) {
-		super(instance, 3);
+		super(instance, 25);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

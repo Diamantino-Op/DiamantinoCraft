@@ -12,7 +12,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftMod;
 @DiamantinocraftModElements.ModElement.Tag
 public class VoidDimensionTeleportToZeroZeroZeroProcedure extends DiamantinocraftModElements.ModElement {
 	public VoidDimensionTeleportToZeroZeroZeroProcedure(DiamantinocraftModElements instance) {
-		super(instance, 38);
+		super(instance, 62);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

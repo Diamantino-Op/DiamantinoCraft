@@ -12,7 +12,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -26,6 +25,7 @@ import net.minecraft.block.Block;
 import java.util.List;
 import java.util.Collections;
 
+import com.diamantino.diamantinocraft.itemgroup.VoidTabBItemGroup;
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 
 @DiamantinocraftModElements.ModElement.Tag
@@ -33,14 +33,13 @@ public class VoidPackStairsBlock extends DiamantinocraftModElements.ModElement {
 	@ObjectHolder("diamantinocraft:void_pack_stairs")
 	public static final Block block = null;
 	public VoidPackStairsBlock(DiamantinocraftModElements instance) {
-		super(instance, 15);
+		super(instance, 8);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(VoidTabBItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

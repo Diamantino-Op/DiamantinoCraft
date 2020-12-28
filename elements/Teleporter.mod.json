@@ -34,7 +34,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "BUILDING_BLOCKS"
+      "value": "CUSTOM:VoidTabB"
     },
     "destroyTool": "pickaxe",
     "customDrop": {

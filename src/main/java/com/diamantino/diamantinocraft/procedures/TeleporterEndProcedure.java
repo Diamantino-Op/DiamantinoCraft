@@ -27,7 +27,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftMod;
 @DiamantinocraftModElements.ModElement.Tag
 public class TeleporterEndProcedure extends DiamantinocraftModElements.ModElement {
 	public TeleporterEndProcedure(DiamantinocraftModElements instance) {
-		super(instance, 32);
+		super(instance, 60);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

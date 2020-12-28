@@ -40,7 +40,6 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
@@ -73,6 +72,7 @@ import java.util.HashMap;
 import java.util.Collections;
 
 import com.diamantino.diamantinocraft.procedures.WireConnectorProcedure;
+import com.diamantino.diamantinocraft.itemgroup.VoidTabBItemGroup;
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 
 @DiamantinocraftModElements.ModElement.Tag
@@ -82,15 +82,14 @@ public class BaseWireCon0Block extends DiamantinocraftModElements.ModElement {
 	@ObjectHolder("diamantinocraft:base_wire_con_0")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BaseWireCon0Block(DiamantinocraftModElements instance) {
-		super(instance, 6);
+		super(instance, 3);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(VoidTabBItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent

@@ -84,7 +84,7 @@ public class BaseWireCon2AngleUpBlock extends DiamantinocraftModElements.ModElem
 	@ObjectHolder("diamantinocraft:base_wire_con_2_angle_up")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BaseWireCon2AngleUpBlock(DiamantinocraftModElements instance) {
-		super(instance, 6);
+		super(instance, 28);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

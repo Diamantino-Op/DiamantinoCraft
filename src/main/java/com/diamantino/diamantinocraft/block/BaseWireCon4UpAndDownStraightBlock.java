@@ -84,7 +84,7 @@ public class BaseWireCon4UpAndDownStraightBlock extends DiamantinocraftModElemen
 	@ObjectHolder("diamantinocraft:base_wire_con_4_up_and_down_straight")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BaseWireCon4UpAndDownStraightBlock(DiamantinocraftModElements instance) {
-		super(instance, 8);
+		super(instance, 38);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

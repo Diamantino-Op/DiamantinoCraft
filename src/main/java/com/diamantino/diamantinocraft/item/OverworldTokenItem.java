@@ -10,13 +10,13 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import java.util.List;
 
+import com.diamantino.diamantinocraft.itemgroup.VoidTabItemGroup;
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 
 @DiamantinocraftModElements.ModElement.Tag
@@ -24,7 +24,7 @@ public class OverworldTokenItem extends DiamantinocraftModElements.ModElement {
 	@ObjectHolder("diamantinocraft:overworld_token")
 	public static final Item block = null;
 	public OverworldTokenItem(DiamantinocraftModElements instance) {
-		super(instance, 34);
+		super(instance, 18);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class OverworldTokenItem extends DiamantinocraftModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.EPIC));
+			super(new Item.Properties().group(VoidTabItemGroup.tab).maxStackSize(64).rarity(Rarity.EPIC));
 			setRegistryName("overworld_token");
 		}
 

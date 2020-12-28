@@ -27,7 +27,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftMod;
 @DiamantinocraftModElements.ModElement.Tag
 public class TeleporterNetherProcedure extends DiamantinocraftModElements.ModElement {
 	public TeleporterNetherProcedure(DiamantinocraftModElements instance) {
-		super(instance, 32);
+		super(instance, 58);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

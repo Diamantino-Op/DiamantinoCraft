@@ -51,7 +51,7 @@ import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 public class VoidBiomeBiome extends DiamantinocraftModElements.ModElement {
 	public static Biome biome;
 	public VoidBiomeBiome(DiamantinocraftModElements instance) {
-		super(instance, 30);
+		super(instance, 56);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

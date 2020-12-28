@@ -12,7 +12,6 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
@@ -23,6 +22,7 @@ import java.util.List;
 import java.util.HashMap;
 
 import com.diamantino.diamantinocraft.procedures.MultimeterShowEnergyProcedure;
+import com.diamantino.diamantinocraft.itemgroup.VoidTabItemGroup;
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 
 @DiamantinocraftModElements.ModElement.Tag
@@ -30,7 +30,7 @@ public class MultimeterItem extends DiamantinocraftModElements.ModElement {
 	@ObjectHolder("diamantinocraft:multimeter")
 	public static final Item block = null;
 	public MultimeterItem(DiamantinocraftModElements instance) {
-		super(instance, 3);
+		super(instance, 17);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class MultimeterItem extends DiamantinocraftModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(VoidTabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("multimeter");
 		}
 

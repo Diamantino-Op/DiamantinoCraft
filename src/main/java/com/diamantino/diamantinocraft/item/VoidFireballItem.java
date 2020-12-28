@@ -15,7 +15,7 @@ public class VoidFireballItem extends DiamantinocraftModElements.ModElement {
 	@ObjectHolder("diamantinocraft:void_fireball")
 	public static final Item block = null;
 	public VoidFireballItem(DiamantinocraftModElements instance) {
-		super(instance, 39);
+		super(instance, 63);
 	}
 
 	@Override
