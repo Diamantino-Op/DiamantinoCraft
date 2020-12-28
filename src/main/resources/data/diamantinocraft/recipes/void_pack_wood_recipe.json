@@ -1,0 +1,26 @@
+{
+  "group": "diamantinocraft",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "diamantinocraft:void_pack_log"
+    },
+    "1": {
+      "item": "diamantinocraft:void_pack_log"
+    },
+    "2": {
+      "item": "diamantinocraft:void_pack_log"
+    },
+    "3": {
+      "item": "diamantinocraft:void_pack_log"
+    }
+  },
+  "result": {
+    "item": "diamantinocraft:void_pack_wood",
+    "count": 1
+  }
+}

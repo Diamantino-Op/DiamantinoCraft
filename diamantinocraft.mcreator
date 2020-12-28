@@ -340,6 +340,150 @@
           }
         ]
       }
+    },
+    {
+      "name": "VoidPackWood",
+      "type": "block",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_wood"
+    },
+    {
+      "name": "VoidPackLog",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_log"
+    },
+    {
+      "name": "VoidPackPlanks",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_planks"
+    },
+    {
+      "name": "VoidPackLeaves",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_leaves"
+    },
+    {
+      "name": "VoidPackStairs",
+      "type": "block",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_stairs"
+    },
+    {
+      "name": "VoidPackSlab",
+      "type": "block",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_slab"
+    },
+    {
+      "name": "VoidPackFence",
+      "type": "block",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_fence"
+    },
+    {
+      "name": "VoidPackFenceGate",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_fence_gate"
+    },
+    {
+      "name": "VoidPackItemsTag",
+      "type": "tag",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_items_tag"
+    },
+    {
+      "name": "VoidPackWoodRecipe",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_wood_recipe"
+    },
+    {
+      "name": "VoidPackPlanksRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_planks_recipe"
+    },
+    {
+      "name": "VoidPackStairsRecipe",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_stairs_recipe"
+    },
+    {
+      "name": "VoidPackSlabRecipe",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_slab_recipe"
+    },
+    {
+      "name": "VoidPackFenceRecipe",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_fence_recipe"
+    },
+    {
+      "name": "VoidPackFenceGateRecipe",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_fence_gate_recipe"
+    },
+    {
+      "name": "VoidPackStickRecipe",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pack_stick_recipe"
     }
   ],
   "variable_elements": [],
@@ -353,7 +497,9 @@
       "block.diamantinocraft.base_wire_con_6": "Base Wire Con 6",
       "block.diamantinocraft.base_wire_con_3_up_angle": "Base Wire Con 3 Up Angle",
       "block.diamantinocraft.base_wire_con_4": "Base Wire Con 4",
+      "block.diamantinocraft.void_pack_log": "Void Log",
       "block.diamantinocraft.base_wire_con_3_down_angle": "Base Wire Con 3 Down Angle",
+      "block.diamantinocraft.void_pack_planks": "Void Planks",
       "item.diamantinocraft.multimeter": "Multimeter",
       "block.diamantinocraft.base_wire_con_4_up_and_down": "Base Wire Con 4 Up And Down",
       "block.diamantinocraft.base_wire_con_2": "Base Wire Con 2",
@@ -365,11 +511,17 @@
       "block.diamantinocraft.base_wire_con_5_up": "Base Wire Con 5 Up",
       "block.diamantinocraft.base_wire_con_2_angle_up": "Base Wire Con 2 Angle Up",
       "block.diamantinocraft.base_wire_con_4_up_and_down_straight": "Base Wire Con 4 Up And Down Straight",
+      "block.diamantinocraft.void_pack_slab": "Void Slab",
+      "block.diamantinocraft.void_pack_stairs": "Void Stairs",
+      "block.diamantinocraft.void_pack_fence": "Void Fence",
+      "block.diamantinocraft.void_pack_wood": "Void Wood",
       "block.diamantinocraft.solar_panel_t_1": "Solar Panel Tier 1",
       "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
       "block.diamantinocraft.base_wire_con_2_angle": "Base Wire Con 2 Angle",
+      "block.diamantinocraft.void_pack_leaves": "Void Leaves",
       "block.diamantinocraft.base_wire_con_5_main": "Base Wire Con 5 Main",
-      "block.diamantinocraft.base_wire_con_3_down": "Base Wire Con 3 Down"
+      "block.diamantinocraft.base_wire_con_3_down": "Base Wire Con 3 Down",
+      "block.diamantinocraft.void_pack_fence_gate": "Void Fence Gate"
     }
   },
   "workspaceSettings": {

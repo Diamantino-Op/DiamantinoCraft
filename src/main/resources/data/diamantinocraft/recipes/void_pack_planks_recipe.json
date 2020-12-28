@@ -1,0 +1,13 @@
+{
+  "group": "diamantinocraft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:voidpack_log"
+    }
+  ],
+  "result": {
+    "item": "diamantinocraft:void_pack_planks",
+    "count": 4
+  }
+}

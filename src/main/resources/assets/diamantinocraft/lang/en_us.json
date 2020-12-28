@@ -6,7 +6,9 @@
   "block.diamantinocraft.base_wire_con_6": "Base Wire Con 6",
   "block.diamantinocraft.base_wire_con_3_up_angle": "Base Wire Con 3 Up Angle",
   "block.diamantinocraft.base_wire_con_4": "Base Wire Con 4",
+  "block.diamantinocraft.void_pack_log": "Void Log",
   "block.diamantinocraft.base_wire_con_3_down_angle": "Base Wire Con 3 Down Angle",
+  "block.diamantinocraft.void_pack_planks": "Void Planks",
   "item.diamantinocraft.multimeter": "Multimeter",
   "block.diamantinocraft.base_wire_con_4_up_and_down": "Base Wire Con 4 Up And Down",
   "block.diamantinocraft.base_wire_con_2": "Base Wire Con 2",
@@ -18,9 +20,15 @@
   "block.diamantinocraft.base_wire_con_5_up": "Base Wire Con 5 Up",
   "block.diamantinocraft.base_wire_con_2_angle_up": "Base Wire Con 2 Angle Up",
   "block.diamantinocraft.base_wire_con_4_up_and_down_straight": "Base Wire Con 4 Up And Down Straight",
+  "block.diamantinocraft.void_pack_slab": "Void Slab",
+  "block.diamantinocraft.void_pack_stairs": "Void Stairs",
+  "block.diamantinocraft.void_pack_fence": "Void Fence",
+  "block.diamantinocraft.void_pack_wood": "Void Wood",
   "block.diamantinocraft.solar_panel_t_1": "Solar Panel Tier 1",
   "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
   "block.diamantinocraft.base_wire_con_2_angle": "Base Wire Con 2 Angle",
+  "block.diamantinocraft.void_pack_leaves": "Void Leaves",
   "block.diamantinocraft.base_wire_con_5_main": "Base Wire Con 5 Main",
-  "block.diamantinocraft.base_wire_con_3_down": "Base Wire Con 3 Down"
+  "block.diamantinocraft.base_wire_con_3_down": "Base Wire Con 3 Down",
+  "block.diamantinocraft.void_pack_fence_gate": "Void Fence Gate"
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "diamantinocraft:blocks/voidpack_planks",
+    "particle": "diamantinocraft:blocks/voidpack_planks"
+  }
+}

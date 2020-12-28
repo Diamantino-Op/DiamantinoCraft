@@ -1,0 +1,33 @@
+{
+  "group": "diamantinocraft",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "diamantinocraft:void_pack_planks"
+    },
+    "3": {
+      "item": "diamantinocraft:void_pack_planks"
+    },
+    "4": {
+      "item": "diamantinocraft:void_pack_planks"
+    },
+    "6": {
+      "item": "diamantinocraft:void_pack_planks"
+    },
+    "7": {
+      "item": "diamantinocraft:void_pack_planks"
+    },
+    "8": {
+      "item": "diamantinocraft:void_pack_planks"
+    }
+  },
+  "result": {
+    "item": "diamantinocraft:void_pack_stairs",
+    "count": 4
+  }
+}

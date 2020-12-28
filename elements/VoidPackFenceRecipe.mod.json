@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 3,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:VoidPackPlanks"
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": "CUSTOM:VoidPackPlanks"
+      },
+      {
+        "value": "CUSTOM:VoidPackPlanks"
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": "CUSTOM:VoidPackPlanks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:VoidPackFence"
+    },
+    "name": "void_pack_fence_recipe",
+    "namespace": "mod"
+  }
+}

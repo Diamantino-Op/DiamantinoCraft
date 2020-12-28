@@ -1,0 +1,19 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:VoidPackWood"
+      },
+      {
+        "value": "CUSTOM:VoidPackLog"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "voidpack_log",
+    "namespace": "forge"
+  }
+}

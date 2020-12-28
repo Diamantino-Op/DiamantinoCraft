@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "diamantinocraft:block/void_pack_slab"
+    },
+    "type=top": {
+      "model": "diamantinocraft:block/void_pack_slab_top"
+    },
+    "type=double": {
+      "model": "diamantinocraft:block/void_pack_slab_full"
+    }
+  }
+}

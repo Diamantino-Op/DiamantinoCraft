@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "diamantinocraft:blocks/voidpack_planks",
+    "top": "diamantinocraft:blocks/voidpack_planks",
+    "side": "diamantinocraft:blocks/voidpack_planks"
+  }
+}
