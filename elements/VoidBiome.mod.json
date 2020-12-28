@@ -80,6 +80,16 @@
       "Fossils",
       "MonsterRooms"
     ],
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:VoidDragon"
+        },
+        "minGroup": 2,
+        "maxGroup": 2,
+        "weight": 50,
+        "spawnType": "monster"
+      }
+    ]
   }
 }

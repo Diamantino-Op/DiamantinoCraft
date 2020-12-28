@@ -33,12 +33,14 @@ import net.minecraft.world.IWorldWriter;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.state.BooleanProperty;
+import net.minecraft.entity.EntityClassification;
 import net.minecraft.block.Blocks;
 
 import java.util.Set;
 
 import com.google.common.collect.ImmutableList;
 
+import com.diamantino.diamantinocraft.entity.VoidDragonEntity;
 import com.diamantino.diamantinocraft.block.VoidPackLogBlock;
 import com.diamantino.diamantinocraft.block.VoidPackLeavesBlock;
 import com.diamantino.diamantinocraft.block.VoidGrassBlock;
@@ -83,6 +85,7 @@ public class VoidBiomeBiome extends DiamantinocraftModElements.ModElement {
 								.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
 								.func_242731_b(4));
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(VoidDragonEntity.entity, 50, 2, 2));
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
