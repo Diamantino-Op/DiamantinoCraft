@@ -47,7 +47,7 @@
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
     "treesPerChunk": 3,
-    "vanillaTreeType": "Big trees",
+    "vanillaTreeType": "Default",
     "treeType": 1,
     "minHeight": 16,
     "treeStem": {

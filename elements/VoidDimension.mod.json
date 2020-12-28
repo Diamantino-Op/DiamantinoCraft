@@ -18,12 +18,12 @@
       "value": -16777216,
       "falpha": 0.0
     },
-    "canRespawnHere": true,
+    "canRespawnHere": false,
     "hasFog": false,
     "isDark": true,
     "doesWaterVaporize": false,
     "sleepResult": "BED_EXPLODES",
-    "hasSkyLight": false,
+    "hasSkyLight": true,
     "imitateOverworldBehaviour": false,
     "onPlayerEntersDimension": {
       "name": "VoidDimensionTeleportToZeroZeroZero"
