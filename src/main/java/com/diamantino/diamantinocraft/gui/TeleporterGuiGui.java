@@ -502,6 +502,10 @@ public class TeleporterGuiGui extends DiamantinocraftModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				TeleporterOverworldProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -509,6 +513,10 @@ public class TeleporterGuiGui extends DiamantinocraftModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				TeleporterNetherProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -516,6 +524,10 @@ public class TeleporterGuiGui extends DiamantinocraftModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				TeleporterVoidProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -523,6 +535,10 @@ public class TeleporterGuiGui extends DiamantinocraftModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				TeleporterEndProcedure.executeProcedure($_dependencies);
 			}
 		}

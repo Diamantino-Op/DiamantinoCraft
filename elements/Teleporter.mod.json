@@ -25,7 +25,10 @@
     "My": 1.0,
     "Mz": 1.0,
     "name": "Teleporter",
-    "specialInfo": [],
+    "specialInfo": [
+      "The teleporter teleport you in other dimension. (Pls go to 0 xx 0",
+      "or you might have problems with the end teleport)"
+    ],
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
