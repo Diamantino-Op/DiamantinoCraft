@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "diamantinocraft:block/base_wire_con_3_down_and_up"
+    },
+    "facing=east": {
+      "model": "diamantinocraft:block/base_wire_con_3_down_and_up",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "diamantinocraft:block/base_wire_con_3_down_and_up",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "diamantinocraft:block/base_wire_con_3_down_and_up",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "diamantinocraft:block/base_wire_con_3_down_and_up",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "diamantinocraft:block/base_wire_con_3_down_and_up",
+      "x": 90
+    }
+  }
+}

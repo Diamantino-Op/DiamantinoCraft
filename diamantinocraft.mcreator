@@ -122,15 +122,254 @@
           }
         ]
       }
+    },
+    {
+      "name": "BaseWireCon0",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_0"
+    },
+    {
+      "name": "BaseWireCon2AngleDown",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_2_angle_down"
+    },
+    {
+      "name": "BaseWireCon2AngleUp",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_2_angle_up"
+    },
+    {
+      "name": "BaseWireCon1",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_1"
+    },
+    {
+      "name": "BaseWireCon2",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_2"
+    },
+    {
+      "name": "BaseWireCon2Angle",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_2_angle"
+    },
+    {
+      "name": "BaseWireCon3UpAngle",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_3_up_angle"
+    },
+    {
+      "name": "BaseWireCon3Up",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_3_up"
+    },
+    {
+      "name": "BaseWireCon3",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_3"
+    },
+    {
+      "name": "BaseWireCon3Down",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_3_down"
+    },
+    {
+      "name": "BaseWireCon3DownAndUp",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_3_down_and_up"
+    },
+    {
+      "name": "BaseWireCon3DownAngle",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_3_down_angle"
+    },
+    {
+      "name": "BaseWireCon4UpAndDownStraight",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_4_up_and_down_straight"
+    },
+    {
+      "name": "BaseWireCon4UpAndDown",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_4_up_and_down"
+    },
+    {
+      "name": "BaseWireCon4Up",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_4_up"
+    },
+    {
+      "name": "BaseWireCon4Down",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_4_down"
+    },
+    {
+      "name": "BaseWireCon4",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_4"
+    },
+    {
+      "name": "BaseWireCon6",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_6"
+    },
+    {
+      "name": "BaseWireCon5Up",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_5_up"
+    },
+    {
+      "name": "BaseWireCon5Main",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_5_main"
+    },
+    {
+      "name": "BaseWireCon5Down",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "base_wire_con_5_down"
+    },
+    {
+      "name": "WireConnector",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wire_connector",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.diamantinocraft.base_wire_con_4_up": "Base Wire Con 4 Up",
+      "block.diamantinocraft.base_wire_con_2_angle_down": "Base Wire Con 2 Angle Down",
+      "block.diamantinocraft.base_wire_con_3_down_and_up": "Base Wire Con 3 Down And Up",
+      "block.diamantinocraft.base_wire_con_5_down": "Base Wire Con 5 Down",
+      "block.diamantinocraft.base_wire_con_6": "Base Wire Con 6",
+      "block.diamantinocraft.base_wire_con_3_up_angle": "Base Wire Con 3 Up Angle",
+      "block.diamantinocraft.base_wire_con_4": "Base Wire Con 4",
+      "block.diamantinocraft.base_wire_con_3_down_angle": "Base Wire Con 3 Down Angle",
+      "item.diamantinocraft.multimeter": "Multimeter",
+      "block.diamantinocraft.base_wire_con_4_up_and_down": "Base Wire Con 4 Up And Down",
+      "block.diamantinocraft.base_wire_con_2": "Base Wire Con 2",
+      "block.diamantinocraft.base_wire_con_3": "Base Wire Con 3",
+      "block.diamantinocraft.base_wire_con_0": "Wire",
+      "block.diamantinocraft.base_wire_con_1": "Base Wire Con 1",
+      "block.diamantinocraft.base_wire_con_3_up": "Base Wire Con 3 Up",
+      "block.diamantinocraft.base_wire_con_4_down": "Base Wire Con 4 Down",
+      "block.diamantinocraft.base_wire_con_5_up": "Base Wire Con 5 Up",
+      "block.diamantinocraft.base_wire_con_2_angle_up": "Base Wire Con 2 Angle Up",
+      "block.diamantinocraft.base_wire_con_4_up_and_down_straight": "Base Wire Con 4 Up And Down Straight",
       "block.diamantinocraft.solar_panel_t_1": "Solar Panel Tier 1",
       "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
-      "item.diamantinocraft.multimeter": "Multimeter"
+      "block.diamantinocraft.base_wire_con_2_angle": "Base Wire Con 2 Angle",
+      "block.diamantinocraft.base_wire_con_5_main": "Base Wire Con 5 Main",
+      "block.diamantinocraft.base_wire_con_3_down": "Base Wire Con 3 Down"
     }
   },
   "workspaceSettings": {

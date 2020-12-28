@@ -1,0 +1,8 @@
+{
+  "parent": "diamantinocraft:custom/base_wire_con_4",
+  "textures": {
+    "all": "diamantinocraft:blocks/base_wire_add",
+    "particle": "diamantinocraft:blocks/base_wire_add",
+    "0": "diamantinocraft:blocks/base_wire_add"
+  }
+}
