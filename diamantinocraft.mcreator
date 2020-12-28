@@ -84,6 +84,44 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "multimeter"
+    },
+    {
+      "name": "EnergyCellT1",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "energy_cell_t_1"
+    },
+    {
+      "name": "EnergyCellT1EnergyManagement",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "energy_cell_t_1_energy_management",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -91,6 +129,7 @@
   "language_map": {
     "en_us": {
       "block.diamantinocraft.solar_panel_t_1": "Solar Panel Tier 1",
+      "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
       "item.diamantinocraft.multimeter": "Multimeter"
     }
   },

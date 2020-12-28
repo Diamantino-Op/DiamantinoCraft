@@ -46,6 +46,7 @@ public class SolarPanelT1GenerateEnergyProcedure extends DiamantinocraftModEleme
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+		double down = 0;
 		if (((((world.canBlockSeeSky(new BlockPos((int) x, (int) y, (int) z))) && ((world instanceof World) ? ((World) world).isDaytime() : false))
 				&& (!world.getWorldInfo().isRaining())) && (!world.getWorldInfo().isThundering()))) {
 			{
@@ -55,15 +56,7 @@ public class SolarPanelT1GenerateEnergyProcedure extends DiamantinocraftModEleme
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
 		}
-		if ((((new Object() {
-			public int getEnergyStored(BlockPos pos) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				TileEntity _ent = world.getTileEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-				return _retval.get();
-			}
-		}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) > 100) && (new Object() {
+		if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -71,18 +64,38 @@ public class SolarPanelT1GenerateEnergyProcedure extends DiamantinocraftModEleme
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(new BlockPos((int) x, (int) (y - 1), (int) z))))) {
-			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
-				int _amount = (int) 100;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> capability.receiveEnergy(_amount, false));
-			}
+		}.canReceiveEnergy(new BlockPos((int) x, (int) (y - 1), (int) z)))) {
+			down = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 100));
+			down = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) (y - 1), (int) z), (int) (down)));
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) 100;
+				int _amount = (int) (down);
 				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> capability.extractEnergy(_amount, false));
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+				int _amount = (int) (down);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
 		}
 	}

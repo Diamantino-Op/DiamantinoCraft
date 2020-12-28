@@ -1,0 +1,10 @@
+{
+  "parent": "diamantinocraft:custom/energy_cell",
+  "textures": {
+    "all": "diamantinocraft:blocks/battry_connector",
+    "particle": "diamantinocraft:blocks/solar_center",
+    "solar_structure": "diamantinocraft:blocks/solar_structure",
+    "battry_connector": "diamantinocraft:blocks/battry_connector",
+    "solar_center": "diamantinocraft:blocks/solar_center"
+  }
+}

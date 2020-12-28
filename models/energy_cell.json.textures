@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "solar_structure": "solar_structure",
+        "battry_connector": "battry_connector",
+        "solar_center": "solar_center"
+      },
+      "name": "default"
+    }
+  }
+}
