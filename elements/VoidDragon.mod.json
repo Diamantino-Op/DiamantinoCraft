@@ -6,7 +6,7 @@
     "mobLabel": "Void Dragon",
     "mobModelName": "ModelEnderDragonModel",
     "mobModelTexture": "void_dragon.png",
-    "mobModelGlowTexture": "void_dragon_exploding.png",
+    "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
