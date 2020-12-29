@@ -17,6 +17,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IBlockReader;
@@ -69,11 +70,14 @@ import net.minecraft.block.Block;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
+import com.diamantino.diamantinocraft.procedures.WireUpdateTickProcedure;
+import com.diamantino.diamantinocraft.procedures.WirePlacedProcedure;
 import com.diamantino.diamantinocraft.procedures.WireConnectorProcedure;
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
 
@@ -188,13 +192,14 @@ public class BaseWireCon3DownBlock extends DiamantinocraftModElements.ModElement
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				WireConnectorProcedure.executeProcedure($_dependencies);
+				WirePlacedProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -215,6 +220,23 @@ public class BaseWireCon3DownBlock extends DiamantinocraftModElements.ModElement
 				$_dependencies.put("world", world);
 				WireConnectorProcedure.executeProcedure($_dependencies);
 			}
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				WireUpdateTickProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 		}
 
 		@Override

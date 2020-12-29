@@ -92,10 +92,13 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": {
-      "name": "WireConnector"
+      "name": "WirePlaced"
     },
     "onNeighbourBlockChanges": {
       "name": "WireConnector"
+    },
+    "onTickUpdate": {
+      "name": "WireUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
