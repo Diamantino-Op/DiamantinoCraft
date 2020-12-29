@@ -1,13 +1,14 @@
 package com.diamantino.diamantinocraft.procedures;
 
-import net.minecraft.world.World;
+import net.minecraftforge.energy.CapabilityEnergy;
+
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Direction;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.block.BlockState;
 
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.Map;
 
 import com.diamantino.diamantinocraft.DiamantinocraftModElements;
@@ -44,599 +45,257 @@ public class WireUpdateTickProcedure extends DiamantinocraftModElements.ModEleme
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
+		double east = 0;
+		double south = 0;
+		double north = 0;
+		double west = 0;
+		double down = 0;
+		double up = 0;
+		if ((new Object() {
+			public boolean canReceiveEnergy(BlockPos pos) {
+				AtomicBoolean _retval = new AtomicBoolean(false);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> _retval.set(capability.canReceive()));
+				return _retval.get();
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")) > 0)) {
-			if (((BlockTags.getCollection().getTagByID(new ResourceLocation(("forge:machine_energy").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock())) && ((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energy")) < ((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energyMax")) - (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")))))) {
-				if (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energy")) < ((new Object() {
-					public double getValue(BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energyMax")) - (new Object() {
-					public double getValue(BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))))) {
-					if (!world.isRemote()) {
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("energy", ((new Object() {
-								public double getValue(BlockPos pos, String tag) {
-									TileEntity tileEntity = world.getTileEntity(pos);
-									if (tileEntity != null)
-										return tileEntity.getTileData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energy")) + (new Object() {
-								public double getValue(BlockPos pos, String tag) {
-									TileEntity tileEntity = world.getTileEntity(pos);
-									if (tileEntity != null)
-										return tileEntity.getTileData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))));
-						if (world instanceof World)
-							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-					}
-					if (!world.isRemote()) {
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("energy", 0);
-						if (world instanceof World)
-							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-					}
-				} else {
-					if (!world.isRemote()) {
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("energy", (new Object() {
-								public double getValue(BlockPos pos, String tag) {
-									TileEntity tileEntity = world.getTileEntity(pos);
-									if (tileEntity != null)
-										return tileEntity.getTileData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energyMax")));
-						if (world instanceof World)
-							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-					}
+		}.canReceiveEnergy(new BlockPos((int) x, (int) (y + 1), (int) z)))) {
+			up = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
 				}
-			} else if ((((BlockTags.getCollection().getTagByID(new ResourceLocation(("forge:cables").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock())) && (!(new Object() {
-						public boolean getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getBoolean(tag);
-							return false;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "logic")))) && (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")) + (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energy"))) <= (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energyMax"))))) {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), "energy")) + (new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 10000));
+			up = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
 				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", 0);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (true));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (false));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-			} else if ((((BlockTags.getCollection().getTagByID(new ResourceLocation(("forge:cables").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock())) && (!(new Object() {
-						public boolean getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getBoolean(tag);
-							return false;
-						}
-					}.getValue(new BlockPos((int) (x + 1), (int) y, (int) z), "logic")))) && (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")) + (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) (x + 1), (int) y, (int) z), "energy"))) <= (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) (x + 1), (int) y, (int) z), "energyMax"))))) {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) (x + 1), (int) y, (int) z), "energy")) + (new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", 0);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (true));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (false));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-			} else if ((((BlockTags.getCollection().getTagByID(new ResourceLocation(("forge:cables").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock())) && (!(new Object() {
-						public boolean getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getBoolean(tag);
-							return false;
-						}
-					}.getValue(new BlockPos((int) (x - 1), (int) y, (int) z), "logic")))) && (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")) + (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) (x - 1), (int) y, (int) z), "energy"))) <= (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) (x - 1), (int) y, (int) z), "energyMax"))))) {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) (x - 1), (int) y, (int) z), "energy")) + (new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", 0);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (true));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (false));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-			} else if ((((BlockTags.getCollection().getTagByID(new ResourceLocation(("forge:cables").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())) && (!(new Object() {
-						public boolean getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getBoolean(tag);
-							return false;
-						}
-					}.getValue(new BlockPos((int) x, (int) (y + 1), (int) z), "logic")))) && (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")) + (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) (y + 1), (int) z), "energy"))) <= (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) (y + 1), (int) z), "energyMax"))))) {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) (y + 1), (int) z), "energy")) + (new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", 0);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (true));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (false));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-			} else if ((((BlockTags.getCollection().getTagByID(new ResourceLocation(("forge:cables").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock())) && (!(new Object() {
-						public boolean getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getBoolean(tag);
-							return false;
-						}
-					}.getValue(new BlockPos((int) x, (int) (y - 1), (int) z), "logic")))) && (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")) + (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) (y - 1), (int) z), "energy"))) <= (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) (y - 1), (int) z), "energyMax"))))) {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) (y - 1), (int) z), "energy")) + (new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", 0);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (true));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (false));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-			} else if ((((BlockTags.getCollection().getTagByID(new ResourceLocation(("forge:cables").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock())) && (!(new Object() {
-						public boolean getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getBoolean(tag);
-							return false;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z + 1)), "logic")))) && (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy")) + (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z + 1)), "energy"))) <= (new Object() {
-						public double getValue(BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) (z + 1)), "energyMax"))))) {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) (z + 1)), "energy")) + (new Object() {
-							public double getValue(BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "energy"))));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("energy", 0);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (true));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("logic", (false));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) (y + 1), (int) z), (int) (up)));
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) (up);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
-		} else {
-			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				TileEntity _tileEntity = world.getTileEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putBoolean("logic", (false));
-				if (world instanceof World)
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y + 1), (int) z));
+				int _amount = (int) (up);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+		} else if ((new Object() {
+			public boolean canReceiveEnergy(BlockPos pos) {
+				AtomicBoolean _retval = new AtomicBoolean(false);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> _retval.set(capability.canReceive()));
+				return _retval.get();
+			}
+		}.canReceiveEnergy(new BlockPos((int) x, (int) (y - 1), (int) z)))) {
+			down = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 10000));
+			down = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) (y - 1), (int) z), (int) (down)));
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) (down);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+				int _amount = (int) (down);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+		} else if ((new Object() {
+			public boolean canReceiveEnergy(BlockPos pos) {
+				AtomicBoolean _retval = new AtomicBoolean(false);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.SOUTH).ifPresent(capability -> _retval.set(capability.canReceive()));
+				return _retval.get();
+			}
+		}.canReceiveEnergy(new BlockPos((int) (x + 1), (int) y, (int) z)))) {
+			north = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 10000));
+			north = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.SOUTH)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.receiveEnergySimulate(new BlockPos((int) (x + 1), (int) y, (int) z), (int) (north)));
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) (north);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+				int _amount = (int) (north);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.SOUTH).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+		} else if ((new Object() {
+			public boolean canReceiveEnergy(BlockPos pos) {
+				AtomicBoolean _retval = new AtomicBoolean(false);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.NORTH).ifPresent(capability -> _retval.set(capability.canReceive()));
+				return _retval.get();
+			}
+		}.canReceiveEnergy(new BlockPos((int) (x - 1), (int) y, (int) z)))) {
+			south = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 10000));
+			south = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.NORTH)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.receiveEnergySimulate(new BlockPos((int) (x - 1), (int) y, (int) z), (int) (south)));
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) (south);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+				int _amount = (int) (south);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.NORTH).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+		} else if ((new Object() {
+			public boolean canReceiveEnergy(BlockPos pos) {
+				AtomicBoolean _retval = new AtomicBoolean(false);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.WEST).ifPresent(capability -> _retval.set(capability.canReceive()));
+				return _retval.get();
+			}
+		}.canReceiveEnergy(new BlockPos((int) x, (int) y, (int) (z + 1))))) {
+			east = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 10000));
+			east = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.WEST)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) y, (int) (z + 1)), (int) (east)));
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) (east);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+				int _amount = (int) (east);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.WEST).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+		} else if ((new Object() {
+			public boolean canReceiveEnergy(BlockPos pos) {
+				AtomicBoolean _retval = new AtomicBoolean(false);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.EAST).ifPresent(capability -> _retval.set(capability.canReceive()));
+				return _retval.get();
+			}
+		}.canReceiveEnergy(new BlockPos((int) x, (int) y, (int) (z - 1))))) {
+			west = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 10000));
+			west = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.EAST)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (west)));
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) (west);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+				int _amount = (int) (west);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.EAST).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
 		}
 	}

@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "diamantinocraft:base_wire_con_0",
+    "diamantinocraft:base_wire_con_2_angle_down",
+    "diamantinocraft:base_wire_con_2_angle_up",
+    "diamantinocraft:base_wire_con_1",
+    "diamantinocraft:base_wire_con_2",
+    "diamantinocraft:base_wire_con_2_angle",
+    "diamantinocraft:base_wire_con_3_up_angle",
+    "diamantinocraft:base_wire_con_3_up",
+    "diamantinocraft:base_wire_con_3",
+    "diamantinocraft:base_wire_con_3_down",
+    "diamantinocraft:base_wire_con_3_down_and_up",
+    "diamantinocraft:base_wire_con_3_down_angle",
+    "diamantinocraft:base_wire_con_4_up_and_down_straight",
+    "diamantinocraft:base_wire_con_4_up_and_down",
+    "diamantinocraft:base_wire_con_4_up",
+    "diamantinocraft:base_wire_con_4_down",
+    "diamantinocraft:base_wire_con_4",
+    "diamantinocraft:base_wire_con_6",
+    "diamantinocraft:base_wire_con_5_up",
+    "diamantinocraft:base_wire_con_5_main",
+    "diamantinocraft:base_wire_con_5_down"
+  ]
+}

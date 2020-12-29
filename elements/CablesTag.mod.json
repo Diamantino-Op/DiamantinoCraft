@@ -1,0 +1,76 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BaseWireCon0"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon2AngleDown"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon2AngleUp"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon1"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon2"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon2Angle"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon3UpAngle"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon3Up"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon3"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon3Down"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon3DownAndUp"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon3DownAngle"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon4UpAndDownStraight"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon4UpAndDown"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon4Up"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon4Down"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon4"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon6"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon5Up"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon5Main"
+      },
+      {
+        "value": "CUSTOM:BaseWireCon5Down"
+      }
+    ],
+    "functions": [],
+    "name": "cables",
+    "namespace": "forge"
+  }
+}

@@ -56,6 +56,47 @@ public class EnergyCellT1EnergyManagementProcedure extends DiamantinocraftModEle
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> _retval.set(capability.canReceive()));
+				return _retval.get();
+			}
+		}.canReceiveEnergy(new BlockPos((int) x, (int) (y + 1), (int) z)))) {
+			up = (double) (new Object() {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null)
+								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 10000));
+			up = (double) (new Object() {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN)
+								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+					return _retval.get();
+				}
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) (y - 1), (int) z), (int) (up)));
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) (up);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+				int _amount = (int) (up);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+		} else if ((new Object() {
+			public boolean canReceiveEnergy(BlockPos pos) {
+				AtomicBoolean _retval = new AtomicBoolean(false);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
@@ -92,8 +133,7 @@ public class EnergyCellT1EnergyManagementProcedure extends DiamantinocraftModEle
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		}
-		if ((new Object() {
+		} else if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -134,8 +174,7 @@ public class EnergyCellT1EnergyManagementProcedure extends DiamantinocraftModEle
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.SOUTH).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		}
-		if ((new Object() {
+		} else if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -176,8 +215,7 @@ public class EnergyCellT1EnergyManagementProcedure extends DiamantinocraftModEle
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.NORTH).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		}
-		if ((new Object() {
+		} else if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -218,8 +256,7 @@ public class EnergyCellT1EnergyManagementProcedure extends DiamantinocraftModEle
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.WEST).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		}
-		if ((new Object() {
+		} else if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
