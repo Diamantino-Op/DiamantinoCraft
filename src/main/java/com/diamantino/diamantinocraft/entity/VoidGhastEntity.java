@@ -36,6 +36,7 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.Goal;
@@ -147,9 +148,10 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
-			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(3, new Goal() {
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(4, new Goal() {
 				{
 					this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
 				}
@@ -188,7 +190,7 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 					}
 				}
 			});
-			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 1, 20) {
+			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1, 20) {
 				@Override
 				protected Vector3d getPosition() {
 					Random random = CustomEntity.this.getRNG();
@@ -198,7 +200,7 @@ public class VoidGhastEntity extends DiamantinocraftModElements.ModElement {
 					return new Vector3d(dir_x, dir_y, dir_z);
 				}
 			});
-			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
 			this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
 				@Override
 				public boolean shouldContinueExecuting() {
