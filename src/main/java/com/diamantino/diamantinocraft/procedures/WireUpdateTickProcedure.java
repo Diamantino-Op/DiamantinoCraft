@@ -92,7 +92,8 @@ public class WireUpdateTickProcedure extends DiamantinocraftModElements.ModEleme
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		} else if ((new Object() {
+		}
+		if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -133,7 +134,8 @@ public class WireUpdateTickProcedure extends DiamantinocraftModElements.ModEleme
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		} else if ((new Object() {
+		}
+		if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -174,7 +176,8 @@ public class WireUpdateTickProcedure extends DiamantinocraftModElements.ModEleme
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.SOUTH).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		} else if ((new Object() {
+		}
+		if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -215,7 +218,8 @@ public class WireUpdateTickProcedure extends DiamantinocraftModElements.ModEleme
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.NORTH).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		} else if ((new Object() {
+		}
+		if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -256,7 +260,8 @@ public class WireUpdateTickProcedure extends DiamantinocraftModElements.ModEleme
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.WEST).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		} else if ((new Object() {
+		}
+		if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
