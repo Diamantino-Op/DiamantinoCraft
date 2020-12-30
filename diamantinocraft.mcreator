@@ -847,6 +847,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cables_tag"
+    },
+    {
+      "name": "JeiPlugin",
+      "type": "code",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "jei_plugin"
     }
   ],
   "variable_elements": [],
@@ -868,8 +877,8 @@
       "item.diamantinocraft.nether_token": "Nether Token",
       "entity.diamantinocraft.void_ghast": "Void Ghast",
       "itemGroup.tabvoid_tab_b": "Voidcraft Blocks",
-      "item.diamantinocraft.void_ghast_spawn_egg": "Void Ghast Spawn Egg",
       "block.diamantinocraft.void_pack_fence": "Void Fence",
+      "item.diamantinocraft.void_ghast_spawn_egg": "Void Ghast Spawn Egg",
       "block.diamantinocraft.energy_cell_t_1": "Energy Cell Tier 1",
       "block.diamantinocraft.base_wire_con_5_main": "Base Wire Con 5 Main",
       "block.diamantinocraft.teleporter": "Teleporter",
