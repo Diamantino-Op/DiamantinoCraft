@@ -19,4 +19,9 @@ authors="DiamantinoOp"
 
 
 
+[[dependencies.diamantinocraft]]
+    modId="jei"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
 

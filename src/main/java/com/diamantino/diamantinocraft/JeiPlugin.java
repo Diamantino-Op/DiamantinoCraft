@@ -19,17 +19,25 @@
 package com.diamantino.diamantinocraft;
 
 import mezz.jei.api.IModPlugin;
-import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.constants.VanillaRecipeCategoryUid;
+import mezz.jei.api.constants.VanillaTypes;
+import mezz.jei.api.gui.IRecipeLayout;
+import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IGuiItemStackGroup;
 import mezz.jei.api.helpers.IGuiHelper;
-import mezz.jei.api.registration.*;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import mezz.jei.api.helpers.IJeiHelpers;
+import mezz.jei.api.ingredients.IIngredients;
+import mezz.jei.api.recipe.category.IRecipeCategory;
+import mezz.jei.api.registration.IRecipeCatalystRegistration;
+import mezz.jei.api.registration.IRecipeCategoryRegistration;
+import mezz.jei.api.registration.IRecipeRegistration;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.util.ResourceLocation;
 
-@JeiPlugin
+import java.util.ArrayList;
+import java.util.List;
+
+@mezz.jei.api.JeiPlugin
 public class JeiPlugin implements IModPlugin {
 
 	public static IJeiHelpers jeiHelper;
@@ -81,3 +89,4 @@ public class JeiPlugin implements IModPlugin {
     }
     
 }
+

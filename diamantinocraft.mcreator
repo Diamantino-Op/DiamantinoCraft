@@ -922,7 +922,9 @@
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
-    "dependencies": [],
+    "dependencies": [
+      "jei"
+    ],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.4",
